@@ -17,16 +17,16 @@ matrix = [
 ];
 
 def rotateMatrix(length = 0, matrix = [[]], degrees = 90, clockwiseFlag = True):  
-"""
-  function rotate Matrix works recursively 'till degrees got 0, decreasing 90 degrees per attempt
-  Args:
-    length :Integer:
-    matrix :Array[Array[Integer]]:
-    degrees :Integer:
-    clockwiseFlag :Boolean:
-  Returns:
-    None
-"""
+    """
+      function rotate Matrix works recursively 'till degrees got 0, decreasing 90 degrees per attempt
+      Args:
+        length :Integer:
+        matrix :Array[Array[Integer]]:
+        degrees :Integer:
+        clockwiseFlag :Boolean:
+      Returns:
+        None
+    """
     try:
         arrowCharDicrection = "Clockwise" if  clockwiseFlag else "Anticlockwise";
         newMatrix= rotateMatrix90Degrees(length, matrix, clockwiseFlag);
@@ -38,15 +38,15 @@ def rotateMatrix(length = 0, matrix = [[]], degrees = 90, clockwiseFlag = True):
         print(f"Error at rotateMatrix: {e}");
 
 def rotateMatrix90Degrees(length = 0, matrix = [[]], clockwiseFlag = True):
-"""
-function rotate Matrix 90 Degrees, it rotates clockwise or anticlockwise
-  Args:
-    length :Integer:
-    matrix :Array[Array[Integer]]:
-    clockwiseFlag :Boolean:
-  Returns:
-    matrix :Array[Array[Integer]]:
-"""
+    """
+    function rotate Matrix 90 Degrees, it rotates clockwise or anticlockwise
+      Args:
+        length :Integer:
+        matrix :Array[Array[Integer]]:
+        clockwiseFlag :Boolean:
+      Returns:
+        matrix :Array[Array[Integer]]:
+    """
     try:
         matrixRotated = [[0] * length for i in range(length)];
         for i in range(0, length):
