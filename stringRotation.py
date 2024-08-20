@@ -12,8 +12,12 @@ wordRotated = "erbottlewat";
 
 def isARotatedString(word = "", wordRotated = "", wordIndex = 0, previousWordIndex=0):  
     """
-      function isARotatedString works recursively 'till ensure found the world on the rotated world.
+      function isARotatedString works recursively 'till ensure it founds the word on the rotated word.
       Args:
+          word :String:
+          wordRotated :String:
+          wordIndex :Integer:
+          previousWordIndex :Integer:
       Returns:
         None
     """
