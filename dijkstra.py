@@ -17,6 +17,12 @@ routes = {};
 best_routes = {};
 
 def get_best_routes():
+    """
+      function get_best_routes
+      Args:
+      Returns:
+        None
+    """
     try:
         for route in routes:
             if (route[len(route)-1] not in best_routes):
@@ -29,6 +35,16 @@ def get_best_routes():
         print(f"Error at get_best_routes: {e}");
         
 def dijkstra_search(next_node = "", previous_node = "", route_counting = 0, route = ""):
+    """
+      function dijkstra_search executing itself recursively
+      Args:
+        next_node :String:
+        previous_node :String:
+        route_counting :Integer:
+        route :String:
+      Returns:
+        None
+    """
     try:
         # print(f"Route: {route} Counting: {route_counting}")
         routes[route]=route_counting;
@@ -40,6 +56,13 @@ def dijkstra_search(next_node = "", previous_node = "", route_counting = 0, rout
         print(f"Error at dijkstra_search: {e}");
 
 def dijkstra(intial_node = ""):
+    """
+      function dijkstra triggers dijkstra_search to be executed recursively
+      Args:
+        intial_node :String:
+      Returns:
+        None
+    """
     try:
         routes[intial_node]=0
         dijkstra_search(intial_node,"",0,intial_node);
@@ -49,7 +72,7 @@ def dijkstra(intial_node = ""):
 def main ():
     try:
         print(f"Running the script: {name}");
-        dijkstra("D");
+        dijkstra("A");
         get_best_routes();
     except Exception as e:
         print(f"Error at Main: {e}");
